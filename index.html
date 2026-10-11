@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100b1b">
+  <meta name="description" content="SideAnime — anime keşfet, puanları incele ve bölümleri takip et.">
+  <title>SideAnime — anime evrenin</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="SideAnime ana sayfa"><span class="brand-mark">▶</span><span>Side<span class="brand-accent">Anime</span></span></a>
+    <nav class="nav-links" aria-label="ana menü">
+      <a class="active" href="#home">ana sayfa</a>
+      <a href="#top">top 10</a>
+      <a href="#catalog">animeler</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="search-toggle" aria-label="arama aç">⌕</button>
+      <button class="profile-button" id="profile-button">hesap <span>↗</span></button>
+    </div>
+  </header>
+
+  <main id="app">
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> anime evrenine hoş geldin</p>
+        <h1>kendi anime<br><span>evrenini keşfet</span></h1>
+        <p class="hero-description">favori serilerini bul, puanlarını keşfet ve bölüm listelerine göz at</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#catalog">animeleri keşfet <span>↗</span></a>
+          <a class="text-button" href="#top">top 10'u gör <span>↓</span></a>
+        </div>
+        <div class="hero-stats"><div><strong id="anime-count">06</strong><span>örnek anime</span></div><i></i><div><strong>∞</strong><span>keşfedilecek dünya</span></div></div>
+      </div>
+      <div class="hero-art" aria-label="SideAnime görsel alanı">
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+        <div class="hero-spark spark-one">✦</div><div class="hero-spark spark-two">✧</div>
+        <img class="hero-character-image" src="assets/hero-character.png" alt="SideAnime pembe saçlı anime maskotu">
+        <div class="floating-tag tag-top"><span>✦</span> yeni dünyalar</div><div class="floating-tag tag-bottom"><span>★</span> favorilerini bul</div>
+      </div>
+      <a class="scroll-cue" href="#catalog"><span></span> keşfetmeye başla</a>
+    </section>
+
+    <section class="section" id="top">
+      <div class="section-heading"><div><p class="eyebrow">topluluğun favorileri</p><h2>öne çıkan <span>animeler</span></h2></div><a href="#catalog" class="see-all">tümünü gör <span>↗</span></a></div>
+      <div class="anime-grid" id="featured-grid"></div>
+    </section>
+
+    <section class="section catalog-section" id="catalog">
+      <div class="section-heading"><div><p class="eyebrow">yeni bir şey keşfet</p><h2>anime <span>kataloğu</span></h2></div><span class="catalog-count" id="catalog-count">06 anime</span></div>
+      <div class="catalog-tools"><label class="search-box"><span>⌕</span><input id="search-input" type="search" placeholder="anime adı ara..." autocomplete="off"></label><div class="filter-pills" id="genre-filters"><button class="filter-pill active" data-genre="Tümü">tümü</button><button class="filter-pill" data-genre="Aksiyon">aksiyon</button><button class="filter-pill" data-genre="Fantastik">fantastik</button><button class="filter-pill" data-genre="Drama">drama</button></div></div>
+      <div class="anime-grid" id="catalog-grid"></div>
+      <p class="empty-state hidden" id="empty-state">bu aramayla eşleşen anime bulunamadı</p>
+    </section>
+
+    <section class="detail-view hidden" id="detail-view"></section>
+    <section class="watch-view hidden" id="watch-view"></section>
+  </main>
+
+  <footer class="footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">▶</span><span>Side<span class="brand-accent">Anime</span></span></a><p>anime evrenin, kendi keşfin</p><span class="footer-note">demo sürüm · içerikler örnektir</span></footer>
+
+  <dialog id="profile-dialog" class="modal"><form method="dialog"><button class="modal-close" aria-label="kapat">×</button><p class="eyebrow">sideanime</p><h2>hesap özelliği yakında</h2><p>bu ücretsiz demo sürümünde favoriler bu tarayıcıda saklanır. gerçek üyelik için ayrıca bir kimlik doğrulama servisi gerekir.</p><button class="primary-button modal-ok">anladım</button></form></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
